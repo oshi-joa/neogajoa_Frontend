@@ -65,6 +65,7 @@ const S_Wrapper = styled.footer`
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 5;
 `;
 
 const S_TabMenu = styled.div`
