@@ -50,6 +50,7 @@ const S_PO = styled.div`
     border: none;
     outline: none;
     height: 143px;
+    padding: 24px;
   }
   > .kjk {
     width: 100%;

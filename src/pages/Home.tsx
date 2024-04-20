@@ -8,7 +8,11 @@ const Home = () => {
   return (
     <>
       <S_BannerWrapper>
-        <S_Banner>
+        <S_Banner
+          onClick={() => {
+            navi('/community');
+          }}
+        >
           <p className="gift">
             여자친구 선물을 <br /> 못 고르겠어요
           </p>
@@ -23,14 +27,14 @@ const Home = () => {
       <S_WishList>
         <p className="wish">내 스타일 위시리스트</p>
         <p className="want">여자친구가 이렇게 입었으면...</p>
-        <p
+        <button
           className="add"
           onClick={() => {
             navi('/clothes-style');
           }}
         >
           추가하러 가기
-        </p>
+        </button>
         <S_imgWrapper>
           <img src={Main3} alt="" />
           <img src={Main4} alt="" />
@@ -53,6 +57,7 @@ const S_BannerWrapper = styled.div`
 const S_Banner = styled.div`
   position: relative;
   border-radius: 20px;
+  z-index: 4;
   background: radial-gradient(100% 100% at 50% 0%, #f6b2b3 0%, #f35eaf 100%);
   width: 100%;
   height: 100px;
@@ -107,8 +112,12 @@ const S_WishList = styled.div`
     font-weight: 500;
   }
   .add {
+    margin-left: 63%;
+    background-color: #fff;
     text-align: right;
     padding-right: 20px;
+    position: relative;
+    z-index: 10;
   }
 `;
 
