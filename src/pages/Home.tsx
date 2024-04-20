@@ -4,7 +4,7 @@ import BottomSheet from '../components/BottomSheet';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-  const navi = useNavigate()
+  const navi = useNavigate();
   return (
     <>
       <S_BannerWrapper>
@@ -23,7 +23,14 @@ const Home = () => {
       <S_WishList>
         <p className="wish">내 스타일 위시리스트</p>
         <p className="want">여자친구가 이렇게 입었으면...</p>
-        <p className="add" onClick={()=>{navi('/clothes-style')}}>추가하러 가기</p>
+        <p
+          className="add"
+          onClick={() => {
+            navi('/clothes-style');
+          }}
+        >
+          추가하러 가기
+        </p>
         <S_imgWrapper>
           <img src={Main3} alt="" />
           <img src={Main4} alt="" />
@@ -47,8 +54,8 @@ const S_Banner = styled.div`
   position: relative;
   border-radius: 20px;
   background: radial-gradient(100% 100% at 50% 0%, #f6b2b3 0%, #f35eaf 100%);
-  width: 98%;
-  height: 95px;
+  width: 100%;
+  height: 100px;
   flex-shrink: 0;
   > .gift {
     position: absolute;

@@ -4,18 +4,26 @@ import Signupbtn from '../assets/image/회원가입 완료.png';
 import Signupbtn_n from '../assets/image/회원가입 완료_n.png';
 import code from '../assets/image/매칭 코드 발급.png';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 export default function Code() {
+  const navigate = useNavigate();
   const [state, setState] = useState('');
 
-  const Signup = () => {};
+  const Signup = () => {
+    setTimeout(() => {
+      toast.success('회원가입이 완료되었습니다.');
+      navigate('/login');
+    }, 800);
+  };
 
   return (
     <S_A>
       <div>
         <p className="title">
           애인의 매칭 코드를
-          <br /> 아시나요?
+          <br /> 아신다면
         </p>
         <div className="input">
           <Input

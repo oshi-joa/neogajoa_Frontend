@@ -9,8 +9,8 @@ export default function Boarding() {
       <S_LOGO src={logo}></S_LOGO>
       <S_Text>너가 조아</S_Text>
       <S_ButtonWrapper>
-        <S_Button onClick={() => navigate('/signup')}>회원가입</S_Button>
-        <S_Button1 onClick={() => navigate('/login')}>로그인</S_Button1>
+        <S_Button onClick={() => navigate('/login')}>로그인</S_Button>
+        <S_Button1 onClick={() => navigate('/signup')}>회원가입</S_Button1>
       </S_ButtonWrapper>
     </S_A>
   );
@@ -60,7 +60,7 @@ const S_Button = styled.button`
   font-weight: 500;
   letter-spacing: -0.6px;
   position: fixed;
-  top: 700px;
+  top: 500px;
   left: 50%;
   transform: translate(-50%);
 `;
@@ -79,7 +79,7 @@ const S_Button1 = styled.button`
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 780px;
+  top: 580px;
   left: 50%;
   transform: translate(-50%);
 `;
