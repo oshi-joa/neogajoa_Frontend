@@ -67,7 +67,7 @@ const S_A = styled.div`
     display: flex;
     flex-direction: column;
     algin-itmes: center;
-    gap: 20px;
+    gap: 10px;
     > p {
       color: #b6b6b6;
       text-align: center;

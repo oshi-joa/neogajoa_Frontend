@@ -103,7 +103,7 @@ const S_input = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   > img {
     width: 100%;
   }
