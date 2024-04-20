@@ -3,7 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import instance from "../utils";
 import { setToken } from "../utils/Token";
 import toast from "react-hot-toast";
-import { AxiosError } from "axios";
+import axios, { AxiosError } from "axios";
 
 interface loginResponseType {
   status: string;
@@ -19,7 +19,10 @@ interface SignupReqeustType {
 export const Login = () => {
   return useMutation(
     async (body: { email: string; password: string }) => {
-      const { data } = await instance.post<loginResponseType>("/login", body);
+      const { data } = await axios.post<loginResponseType>(
+        `${process.env.REACT_APP_BASE_URL}/login`,
+        body
+      );
       return data;
     },
     {
@@ -56,3 +59,21 @@ export const useGetCode = () => {
     },
   )
 }
+
+export const useLogout = () => {
+  return useQuery(
+    ["logout"],
+    async () => {
+      const { data } = await instance.get("/logout");
+      return data;
+    },
+    {
+      onSuccess: () => {
+        console.log("로그인 페이지로 이동");
+      },
+      onError: (error: AxiosError) => {
+        toast.error(error.message);
+      },
+    }
+  );
+};
