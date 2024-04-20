@@ -20,7 +20,7 @@ export default function Signup() {
   return (
     <S_A>
       <S_LOGO src={logo}></S_LOGO>
-      <div>
+      <S_input>
         <Input
           type="text"
           placeholder="이름을 입력해주세요"
@@ -49,7 +49,7 @@ export default function Signup() {
             setState({ ...state, password_check: e.target.value });
           }}
         />
-      </div>
+      </S_input>
     </S_A>
   );
 }
@@ -64,4 +64,14 @@ const S_LOGO = styled.img`
   top: 100px;
   left: 50%;
   transform: translate(-50%);
+`;
+
+const S_input = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 `;

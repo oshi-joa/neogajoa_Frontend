@@ -1,14 +1,32 @@
 import styled from '@emotion/styled';
-import { ChangeEvent } from 'react';
+import {
+  ChangeEvent,
+  InputHTMLAttributes,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
-interface Props {
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
   type: string;
   placeholder: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Input = ({ ...props }: Props) => {
-  return <InputContainer {...props} autoComplete="none" />;
+  const ref = useRef<HTMLInputElement | null>(null);
+  const [borderColor, setBOR] = useState('');
+  useEffect(() => {
+    if (ref.current) {
+      if (ref.current.value !== '') {
+        setBOR('#F66994');
+      } else {
+        setBOR('#fde8ee');
+      }
+      ref.current.style.borderColor = borderColor;
+    }
+  }, [ref.current?.value]);
+  return <InputContainer ref={ref} {...props} autoComplete="none" />;
 };
 
 const InputContainer = styled.input`
@@ -19,7 +37,7 @@ const InputContainer = styled.input`
   border: 1px solid #fde8ee;
   box-sizing: border-box;
   color: #f66994;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
