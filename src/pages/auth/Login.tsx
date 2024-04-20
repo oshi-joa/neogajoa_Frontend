@@ -4,6 +4,7 @@ import { Input } from '../../components/common/Input';
 import logo from '../../assets/image/너가 조아 마니 조아.png';
 import Next from '../../assets/image/다음.png';
 import Next_n from '../../assets/image/다음_n.png';
+import { useLogin } from '../../apis/auth';
 
 interface StateType {
   email: string;
@@ -11,12 +12,18 @@ interface StateType {
 }
 
 export default function Login() {
+  const loginMutation = useLogin();
   const [state, setState] = useState<StateType>({
     email: '',
     password: '',
   });
 
-  const LoginMutate = () => {};
+  const LoginMutate = () => {
+    loginMutation.mutate({
+      email: state.email,
+      password: state.password,
+    });
+  };
 
   return (
     <S_Wrapper>

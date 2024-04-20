@@ -4,6 +4,7 @@ import { Input } from '../components/common/Input';
 import { useState } from 'react';
 import Next from '../assets/image/다음.png';
 import Next_n from '../assets/image/다음_n.png';
+import { useSignup } from '../apis/auth';
 
 interface StateType {
   name: string;
@@ -13,6 +14,7 @@ interface StateType {
 }
 
 export default function Signup() {
+  const signupMutation = useSignup();
   const [state, setState] = useState<StateType>({
     name: '',
     email: '',
@@ -20,7 +22,13 @@ export default function Signup() {
     password_check: '',
   });
 
-  const SignupMutate = () => {};
+  const SignupMutation = () => {
+    signupMutation.mutate({
+      name: state.name,
+      email: state.email,
+      password: state.password,
+    });
+  };
 
   return (
     <S_A>
@@ -62,7 +70,7 @@ export default function Signup() {
               state.password &&
               state.password_check
             )
-              SignupMutate();
+              SignupMutation();
           }}
           alt=""
           src={
@@ -96,4 +104,7 @@ const S_input = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  > img {
+    width: 100%;
+  }
 `;
