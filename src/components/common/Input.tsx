@@ -8,18 +8,22 @@ interface Props {
 }
 
 export const Input = ({ ...props }: Props) => {
-  return <InputContainer {...props} />;
+  return <InputContainer {...props} autoComplete="none" />;
 };
 
 const InputContainer = styled.input`
   width: 100%;
   flex-shrink: 0;
-  height: 60px;
-  padding: 10px 20px;
+  padding: 20px;
   border-radius: 100px;
   border: 1px solid #fde8ee;
+  box-sizing: border-box;
+  color: #f66994;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   outline: none;
-  font-size: 17px;
   ::placeholder {
     font-weight: 400;
     font-size: 16px;

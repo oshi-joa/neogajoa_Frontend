@@ -6,6 +6,7 @@ import Community from './pages/Community';
 import MyInfo from './pages/MyInfo';
 import ClothesStyle from './pages/ClothesStyle';
 import OnBoarding from './pages/auth/OnBoarding';
+import Signup from './pages/signup';
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path="/my-info" element={<MyInfo />} />
         <Route path="/clothes-style" element={<ClothesStyle />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </>
   );

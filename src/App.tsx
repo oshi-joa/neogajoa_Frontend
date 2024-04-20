@@ -12,8 +12,8 @@ const App = () => {
 };
 
 const S_Wrapper = styled.div`
-  margin: 0px 20px;
-  width: 100%;
+  padding: 0px 20px;
+  width: 100vw;
   height: 100vh;
 `;
 

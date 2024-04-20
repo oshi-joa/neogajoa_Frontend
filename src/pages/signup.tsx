@@ -1,16 +1,62 @@
-import styled from "@emotion/styled";
-import logo from "../assets/image/너가 조아 마니 조아.png";
+import styled from '@emotion/styled';
+import logo from '../assets/image/너가 조아 마니 조아.png';
+import { Input } from '../components/common/Input';
+import { useState } from 'react';
+
+interface StateType {
+  name: string;
+  email: string;
+  password: string;
+  password_check: string;
+}
+
 export default function Signup() {
+  const [state, setState] = useState<StateType>({
+    name: '',
+    email: '',
+    password: '',
+    password_check: '',
+  });
   return (
     <S_A>
       <S_LOGO src={logo}></S_LOGO>
+      <div>
+        <Input
+          type="text"
+          placeholder="이름을 입력해주세요"
+          onChange={(e) => {
+            setState({ ...state, name: e.target.value });
+          }}
+        />
+        <Input
+          type="email"
+          placeholder="이메일을 입력해주세요"
+          onChange={(e) => {
+            setState({ ...state, email: e.target.value });
+          }}
+        />
+        <Input
+          type="password"
+          placeholder="비밀번호를 입력해주세요"
+          onChange={(e) => {
+            setState({ ...state, password: e.target.value });
+          }}
+        />
+        <Input
+          type="password"
+          placeholder="비밀번호를 입력해주세요"
+          onChange={(e) => {
+            setState({ ...state, password_check: e.target.value });
+          }}
+        />
+      </div>
     </S_A>
   );
 }
 
 const S_A = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 `;
 
 const S_LOGO = styled.img`
