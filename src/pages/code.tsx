@@ -43,7 +43,7 @@ export default function Code() {
             alt=""
           />
           <p>혹은</p>
-          <img src={code} alt="" onClick={() => {}} />
+          <img src={code} alt="" onClick={() => navigate('/getcode')} />
         </div>
       </div>
     </S_A>
