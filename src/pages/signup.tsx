@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 import logo from '../assets/image/너가 조아 마니 조아.png';
 import { Input } from '../components/common/Input';
 import { useState } from 'react';
+import Next from '../assets/image/다음.png';
+import Next_n from '../assets/image/다음_n.png';
 
 interface StateType {
   name: string;
@@ -17,6 +19,9 @@ export default function Signup() {
     password: '',
     password_check: '',
   });
+
+  const SignupMutate = () => {};
+
   return (
     <S_A>
       <S_LOGO src={logo}></S_LOGO>
@@ -48,6 +53,23 @@ export default function Signup() {
           onChange={(e) => {
             setState({ ...state, password_check: e.target.value });
           }}
+        />
+        <img
+          onClick={() => {
+            if (
+              state.name &&
+              state.email &&
+              state.password &&
+              state.password_check
+            )
+              SignupMutate();
+          }}
+          alt=""
+          src={
+            state.name && state.email && state.password && state.password_check
+              ? Next
+              : Next_n
+          }
         />
       </S_input>
     </S_A>

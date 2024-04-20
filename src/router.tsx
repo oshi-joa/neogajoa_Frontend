@@ -7,6 +7,7 @@ import MyInfo from './pages/MyInfo';
 import ClothesStyle from './pages/ClothesStyle';
 import OnBoarding from './pages/auth/OnBoarding';
 import Signup from './pages/signup';
+import Code from './pages/code';
 
 const Router = () => {
   return (
@@ -19,6 +20,7 @@ const Router = () => {
         <Route path="/clothes-style" element={<ClothesStyle />} />
         <Route path="/community" element={<Community />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/code" element={<Code />} />
       </Routes>
     </>
   );
