@@ -1,15 +1,20 @@
-import React from "react";
-import { Toaster } from "react-hot-toast";
-import BottomSheet from "./components/BottomSheet";
-import Gamepage from "./pages/game";
+import styled from '@emotion/styled';
+import { Toaster } from 'react-hot-toast';
+import Router from './router';
 
 const App = () => {
   return (
-    <div>
+    <S_Wrapper>
       <Toaster />
-      <Gamepage />
-    </div>
+      <Router />
+    </S_Wrapper>
   );
 };
+
+const S_Wrapper = styled.div`
+  margin: 0px 20px;
+  width: 100%;
+  height: 100vh;
+`;
 
 export default App;
