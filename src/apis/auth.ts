@@ -16,7 +16,7 @@ interface SignupReqeustType {
   password: string;
 }
 
-export const Login = () => {
+export const useLogin = () => {
   return useMutation(
     async (body: { email: string; password: string }) => {
       const { data } = await axios.post<loginResponseType>(
