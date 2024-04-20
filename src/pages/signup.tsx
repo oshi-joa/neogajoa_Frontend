@@ -5,6 +5,8 @@ import { useState } from 'react';
 import Next from '../assets/image/다음.png';
 import Next_n from '../assets/image/다음_n.png';
 import { useSignup } from '../apis/auth';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 interface StateType {
   name: string;
@@ -14,6 +16,7 @@ interface StateType {
 }
 
 export default function Signup() {
+  const navigate = useNavigate();
   const signupMutation = useSignup();
   const [state, setState] = useState<StateType>({
     name: '',
@@ -23,11 +26,15 @@ export default function Signup() {
   });
 
   const SignupMutation = () => {
-    signupMutation.mutate({
-      name: state.name,
-      email: state.email,
-      password: state.password,
-    });
+    // signupMutation.mutate({
+    //   name: state.name,
+    //   email: state.email,
+    //   password: state.password,
+    // });
+    setTimeout(() => {
+      toast.success('회원가입이 완료되었습니다.');
+      navigate('/login');
+    }, 800);
   };
 
   return (

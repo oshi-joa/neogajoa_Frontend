@@ -12,3 +12,10 @@ export { default as PinkOX } from './img/ActOX.png';
 
 // Onboarding
 export { default as Onboarding } from './img/Onboarding.png';
+
+// main
+export { default as Main1 } from './img/Main1.png';
+export { default as Main2 } from './img/Main2.png';
+export { default as Arrow } from './img/Arrow.png';
+export { default as Main3 } from './img/Main3.png';
+export { default as Main4 } from './img/Main4.png';

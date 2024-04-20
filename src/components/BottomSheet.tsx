@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
-import React, { useState } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import styled from '@emotion/styled';
+import React, { useState } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 gsap.registerPlugin(useGSAP);
 
@@ -10,12 +10,12 @@ const BottomSheet = () => {
 
   const HandleMoveBottomSheet = () => {
     if (isOpen) {
-      gsap.to("#bottom-sheet", {
+      gsap.to('#bottom-sheet', {
         bottom: 0,
         onComplete: () => setIsOpen(false),
       });
     } else {
-      gsap.to("#bottom-sheet", {
+      gsap.to('#bottom-sheet', {
         top: 0,
         onComplete: () => setIsOpen(true),
       });
