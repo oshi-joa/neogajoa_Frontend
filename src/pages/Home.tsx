@@ -57,7 +57,6 @@ const S_BannerWrapper = styled.div`
 const S_Banner = styled.div`
   position: relative;
   border-radius: 20px;
-  z-index: 4;
   background: radial-gradient(100% 100% at 50% 0%, #f6b2b3 0%, #f35eaf 100%);
   width: 100%;
   height: 100px;
@@ -117,7 +116,6 @@ const S_WishList = styled.div`
     text-align: right;
     padding-right: 20px;
     position: relative;
-    z-index: 10;
   }
 `;
 
