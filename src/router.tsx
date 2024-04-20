@@ -14,7 +14,7 @@ const Router = () => {
     <>
       <Routes>
         <Route element={<OutletRouter />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/balance" element={<Gamepage />} />
           <Route path="/my-info" element={<MyInfo />} />
           <Route path="/clothes-style" element={<ClothesStyle />} />
