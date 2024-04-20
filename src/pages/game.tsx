@@ -50,7 +50,6 @@ const S_PO = styled.div`
     border: none;
     outline: none;
     height: 143px;
-    padding: 24px;
   }
   > .kjk {
     width: 100%;
@@ -91,7 +90,6 @@ export default function Gamepage() {
 const S_A = styled.div`
   width: 100%;
   height: 100%;
-  padding: 20px;
   & hr {
     margin-top: 35px;
     border: 1px solid #fef1f5;
