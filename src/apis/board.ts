@@ -11,14 +11,14 @@ interface CreateBoardRequestType {
 }
 
 interface BoardResponseType {
-  CreatedAt: "2024-04-20T20:41:58.877+09:00";
-  UpdatedAt: "2024-04-20T20:41:58.877+09:00";
+  CreatedAt: string;
+  UpdatedAt: string;
   DeletedAt: null;
   ID: 2;
-  Author: "정현서";
-  Title: "test";
-  Description: "아ㅏ 개발하기 시러";
-  Date: "2024-04-20 20:41:58";
+  Author: string;
+  Title: string;
+  Description: string;
+  Date: string;
 }
 
 const router = "/board";
