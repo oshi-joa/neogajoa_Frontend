@@ -8,6 +8,7 @@ import Gamepage from './pages/game';
 import Home from './pages/Home';
 import MyInfo from './pages/MyInfo';
 import Signup from './pages/signup';
+import OnBoarding from './pages/Boarding';
 
 const Router = () => {
   return (
@@ -24,6 +25,7 @@ const Router = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/code" element={<Code />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/" element={<OnBoarding />} />
       </Routes>
     </>
   );
