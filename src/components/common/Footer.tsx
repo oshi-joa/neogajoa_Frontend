@@ -30,9 +30,9 @@ const NavigationBar = () => {
           alt="커뮤니티 이미지"
         />
       </S_TabMenu>
-      <S_TabMenu onClick={() => navigate('/')}>
+      <S_TabMenu onClick={() => navigate('/home')}>
         <img
-          src={location.pathname === '/' ? PinkHomePage : HomePage}
+          src={location.pathname === '/home' ? PinkHomePage : HomePage}
           alt="홈 이미지"
         />
       </S_TabMenu>
@@ -64,7 +64,7 @@ const S_Wrapper = styled.footer`
   border-top: 1px solid #dcdcdc;
   position: fixed;
   bottom: 0;
-  left: 0;  
+  left: 0;
 `;
 
 const S_TabMenu = styled.div`
