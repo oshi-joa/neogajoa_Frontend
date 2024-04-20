@@ -1,11 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import App from './App';
+import Login from './pages/auth/Login';
 import Home from './pages/Home';
 import Balance from './pages/Balance';
 import Community from './pages/Community';
 import MyInfo from './pages/MyInfo';
 import ClothesStyle from './pages/ClothesStyle';
-import OnBoarding from './pages/auth/OnBoarding';
 import Signup from './pages/signup';
 import Code from './pages/code';
 
@@ -13,7 +12,7 @@ const Router = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<OnBoarding />} />
+        <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/balance" element={<Balance />} />
         <Route path="/my-info" element={<MyInfo />} />

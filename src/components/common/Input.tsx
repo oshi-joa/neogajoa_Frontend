@@ -31,9 +31,9 @@ export const Input = ({ ...props }: Props) => {
 
 const InputContainer = styled.input`
   width: 100%;
-  flex-shrink: 0;
-  padding: 20px;
-  border-radius: 100px;
+  height: 60px;
+  padding: 10px 20px;
+  border-radius: 35px;
   border: 1px solid #fde8ee;
   box-sizing: border-box;
   color: #f66994;
