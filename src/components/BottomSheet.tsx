@@ -2,24 +2,20 @@ import styled from '@emotion/styled';
 import React, { useState } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(useGSAP);
 
 const BottomSheet = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const navi = useNavigate();
 
   const HandleMoveBottomSheet = () => {
-    if (isOpen) {
-      gsap.to('#bottom-sheet', {
-        bottom: 0,
-        onComplete: () => setIsOpen(false),
-      });
-    } else {
-      gsap.to('#bottom-sheet', {
-        top: 0,
-        onComplete: () => setIsOpen(true),
-      });
-    }
+    gsap.to('#bottom-sheet', {
+      top: 0,
+      onComplete: () => {
+        navi('/balance');
+      },
+    });
   };
   return (
     <S_Wrapper>
@@ -34,7 +30,9 @@ const BottomSheet = () => {
               <br />
               조아를 확인 해 보세요
             </h2>
-            <p>+3</p>
+            <div className="qq">
+              <p>+3</p>
+            </div>
           </div>
         </S_Container>
       </div>
@@ -43,11 +41,13 @@ const BottomSheet = () => {
 };
 
 const S_Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;
+  left: 0;
   > div {
     width: 100%;
     height: 100%;
@@ -56,18 +56,29 @@ const S_Wrapper = styled.div`
 `;
 
 const S_Container = styled.div`
-  width: 100vw;
+  width: 100%;
   background-color: #f5f5f5;
   padding: 29px 20px;
   border-radius: 20px 20px 0 0;
   position: absolute;
-  bottom: 0;
+  bottom: 70px;
   > div {
     position: relative;
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: space-between;
+    > .qq {
+      padding: 4px 15px;
+      background: radial-gradient(
+        100% 100% at 50% 0%,
+        #f6b2b3 0%,
+        #f35eaf 100%
+      );
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: cneter;
+    }
   }
   & h2 {
     font-weight: 700;
@@ -77,7 +88,7 @@ const S_Container = styled.div`
   & p {
     font-weight: 700;
     font-size: 20px;
-    color: #e8427e;
+    color: #fff;
   }
 `;
 

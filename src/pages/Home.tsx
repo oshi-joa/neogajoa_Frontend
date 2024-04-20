@@ -1,7 +1,10 @@
 import styled from '@emotion/styled';
 import { Arrow, Main2, Main3, Main4 } from '../assets';
+import BottomSheet from '../components/BottomSheet';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navi = useNavigate()
   return (
     <>
       <S_BannerWrapper>
@@ -20,12 +23,13 @@ const Home = () => {
       <S_WishList>
         <p className="wish">내 스타일 위시리스트</p>
         <p className="want">여자친구가 이렇게 입었으면...</p>
-        <p className="add">추가하러 가기</p>
+        <p className="add" onClick={()=>{navi('/clothes-style')}}>추가하러 가기</p>
         <S_imgWrapper>
           <img src={Main3} alt="" />
           <img src={Main4} alt="" />
         </S_imgWrapper>
       </S_WishList>
+      <BottomSheet />
     </>
   );
 };

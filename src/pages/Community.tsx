@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import { useState } from 'react';
 
 const Button = ({ children, clicked, setState }: any) => {
   return (
