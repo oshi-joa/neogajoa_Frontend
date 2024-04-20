@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import NavigationBar from '../components/common/Footer';
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      Home
+    </div>
+  );
+};
 
-export default Home
+export default Home;

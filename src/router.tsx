@@ -1,23 +1,25 @@
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import OutletRouter from './outletRouter';
 import Login from './pages/auth/Login';
-import Home from './pages/Home';
-import Balance from './pages/Balance';
-import Community from './pages/Community';
-import MyInfo from './pages/MyInfo';
 import ClothesStyle from './pages/ClothesStyle';
-import Signup from './pages/signup';
 import Code from './pages/code';
+import Community from './pages/Community';
+import Gamepage from './pages/game';
+import Home from './pages/Home';
+import MyInfo from './pages/MyInfo';
+import Signup from './pages/signup';
 
 const Router = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/balance" element={<Balance />} />
-        <Route path="/my-info" element={<MyInfo />} />
-        <Route path="/clothes-style" element={<ClothesStyle />} />
-        <Route path="/community" element={<Community />} />
+        <Route element={<OutletRouter />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/balance" element={<Gamepage />} />
+          <Route path="/my-info" element={<MyInfo />} />
+          <Route path="/clothes-style" element={<ClothesStyle />} />
+          <Route path="/community" element={<Community />} />
+        </Route>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/code" element={<Code />} />
