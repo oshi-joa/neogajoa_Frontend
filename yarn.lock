@@ -2024,6 +2024,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gsap/react@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@gsap/react@npm:2.1.0"
+  dependencies:
+    gsap: "npm:^3.12.4"
+    react: "npm:>=16"
+  checksum: 10c0/00ec2d2e312aae8ba56d323e373b70255e67b3825490c92087a18b02405711b31cfe7569e8c9eaf342b5b5c89e6716c6e16e1825ff751aa834c3ce9134f95b73
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
@@ -7154,6 +7164,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gsap@npm:^3.12.4, gsap@npm:^3.12.5":
+  version: 3.12.5
+  resolution: "gsap@npm:3.12.5"
+  checksum: 10c0/cb38e89bd577fc18c9cf77e4aeb83617603b1e0fa768fe8ca1acd836fd852936722e186a88c9cf6ece42e53407edd45324be2bfe35a41f424c5f2c2b33fd1a98
+  languageName: node
+  linkType: hard
+
 "gzip-size@npm:^6.0.0":
   version: 6.0.0
   resolution: "gzip-size@npm:6.0.0"
@@ -9579,6 +9596,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.11.4"
     "@emotion/styled": "npm:^11.11.5"
+    "@gsap/react": "npm:^2.1.0"
     "@tanstack/react-query": "npm:4.29.12"
     "@testing-library/jest-dom": "npm:^5.14.1"
     "@testing-library/react": "npm:^13.0.0"
@@ -9588,6 +9606,7 @@ __metadata:
     "@types/react": "npm:^18.0.0"
     "@types/react-dom": "npm:^18.0.0"
     axios: "npm:^1.6.8"
+    gsap: "npm:^3.12.5"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-hot-toast: "npm:^2.4.1"
@@ -11492,7 +11511,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.2.0":
+"react@npm:>=16, react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
